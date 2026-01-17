@@ -21,6 +21,7 @@ connectDB();
 // const { checkApiKey } = require("./middlewares/apiKey.middlewares");
 
 // app.use(checkApiKey);
+
 app.get("/", (req, res) => {
 	return res.json({
 		success:true,
