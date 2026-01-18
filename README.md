@@ -150,6 +150,7 @@ JWT_SECRET=your_jwt_secret_key
 CLOUD_NAME=your_cloudinary_cloud_name
 API_KEY=your_cloudinary_api_key
 API_SECRET=your_cloudinary_api_secret
+API_KEY_CHECK=hcl-hackathon-2025
 
 # Email Configuration (for OTP)
 EMAIL_HOST=your_email_host
