@@ -37,6 +37,7 @@ const App = () => {
         <Route path='/admin/orders' element={ <PrivateRoute><AdminAllOrders /> </PrivateRoute> } />
         <Route path='/admin' element={ <PrivateRoute><AdminDashboard /> </PrivateRoute> } />
         
+        
         <Route path='/login' element= {<PublicRoute> <Login /></PublicRoute> } />
         <Route path='/about' element={<About />} />
         <Route path='/my-profile' element={<MyProfile />} />

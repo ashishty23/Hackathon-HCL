@@ -210,18 +210,6 @@ const AdminDashboard = () => {
               />
             </div>
 
-            {/* <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">
-                Category
-              </label>
-              <input
-                name="category"
-                placeholder="e.g., Main Course"
-                value={form.category}
-                onChange={handleChange}
-                className="w-full p-3 rounded-xl bg-gradient-to-r from-teal-50 to-cyan-50 border-2 border-teal-200 focus:border-teal-400 focus:outline-none transition-all duration-300 text-gray-800"
-              />
-            </div> */}
 <div>
   <label className="block text-sm font-semibold text-gray-700 mb-2">
     Category

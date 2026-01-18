@@ -92,30 +92,6 @@ const [actionLoading, setActionLoading] = useState(false); // ADD THIS LINE
     });
   };
 
-  // const clearCart = async () => {
-  //   setConfirmModal({
-  //     title: "Clear Cart?",
-  //     message: "Are you sure you want to remove all items from your cart?",
-  //     type: "clear",
-  //     onConfirm: async () => {
-  //       try {
-  //         await axios.delete(`${BASE_URL}/cart/clear`, {
-  //           headers: {
-  //             Authorization: `Bearer ${token}`,
-  //             "x-api-key": process.env.REACT_APP_API_KEY
-  //           }
-  //         });
-  //         showToast("Cart cleared!", "success");
-  //         setConfirmModal(null);
-  //         navigate('/menu');
-  //       } catch (error) {
-  //         showToast("Failed to clear cart", "error");
-  //         setConfirmModal(null);
-  //       }
-  //     },
-  //     onCancel: () => setConfirmModal(null)
-  //   });
-  // };
 const clearCart = async () => {
   setConfirmModal({
     title: "Clear Cart?",
@@ -143,34 +119,7 @@ const clearCart = async () => {
     onCancel: () => setConfirmModal(null)
   });
 };
-  // const placeOrder = async () => {
-  //   setConfirmModal({
-  //     title: "Place Order?",
-  //     message: `Confirm your order for ₹${cart?.totalAmount}?`,
-  //     type: "order",
-  //     onConfirm: async () => {
-  //       try {
-  //         await axios.post(
-  //           `${BASE_URL}/orders`,
-  //           {},
-  //           {
-  //             headers: {
-  //               Authorization: `Bearer ${token}`,
-  //               "x-api-key": process.env.REACT_APP_API_KEY
-  //             }
-  //           }
-  //         );
-  //         showToast("Order placed successfully! 🎉", "success");
-  //         setConfirmModal(null);
-  //         setTimeout(() => navigate('/your-orders'), 1500);
-  //       } catch (error) {
-  //         showToast(error.response?.data?.message || "Order failed", "error");
-  //         setConfirmModal(null);
-  //       }
-  //     },
-  //     onCancel: () => setConfirmModal(null)
-  //   });
-  // };
+
 
   const placeOrder = async () => {
   setConfirmModal({
@@ -339,42 +288,7 @@ const clearCart = async () => {
         )}
       </div>
 
-      {/* Confirmation Modal */}
-      {/* {confirmModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 animate-fade-in backdrop-blur-sm">
-          <div className="bg-white rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl transform animate-scale-in border-2 border-cyan-200">
-            <div className="text-center mb-6">
-              <div className="text-6xl mb-4">
-                {confirmModal.type === "order" ? "🎉" : confirmModal.type === "clear" ? "🗑️" : "❌"}
-              </div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-2">
-                {confirmModal.title}
-              </h3>
-              <p className="text-gray-600">
-                {confirmModal.message}
-              </p>
-            </div>
-            <div className="flex gap-3">
-              <button
-                onClick={confirmModal.onCancel}
-                className="flex-1 py-3 bg-gray-200 text-gray-700 rounded-xl font-semibold hover:bg-gray-300 transition-all duration-300"
-              >
-                Cancel
-              </button>
-              <button
-                onClick={confirmModal.onConfirm}
-                className={`flex-1 py-3 text-white rounded-xl font-semibold transition-all duration-300 shadow-lg ${
-                  confirmModal.type === "order"
-                    ? "bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600"
-                    : "bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600"
-                }`}
-              >
-                Confirm ✓
-              </button>
-            </div>
-          </div>
-        </div>
-      )} */}
+
 
       {/* Confirmation Modal */}
 {confirmModal && (

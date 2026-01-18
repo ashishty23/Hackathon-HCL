@@ -136,7 +136,7 @@ const Home = () => {
       </section>
 
       {/* Feedback Section */}
-      <section className="py-24 px-6">
+      {/* <section className="py-24 px-6">
         <div className="max-w-3xl mx-auto">
           <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-10">
 
@@ -163,7 +163,7 @@ const Home = () => {
 
           </div>
         </div>
-      </section>
+      </section> */}
 
     </div>
 

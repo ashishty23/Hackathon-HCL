@@ -105,18 +105,6 @@ const VerifyOpt = () => {
           </span>
         </button>
 
-        {/* Resend OTP (optional) */}
-        {/* 
-        <div className="text-center pt-2">
-          <p className="text-sm text-gray-500">
-            Didn’t receive the code?{" "}
-            <button className="text-cyan-600 font-medium hover:underline">
-              Resend OTP
-            </button>
-          </p>
-        </div> 
-        */}
-
       </div>
     </div>
   </div>
