@@ -10,7 +10,8 @@ exports.cloudinaryConnect = () => {
 			api_secret: process.env.API_SECRET,
 		    }
 	              );
-	} catch (error) {
+	} 
+	catch (error) {
 		console.log(error);
 	}
 };
