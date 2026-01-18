@@ -1,9 +1,6 @@
 const Feedback = require("../models/feedback.model");
 
-/**
- * @desc    Add feedback
- * @route   POST /api/v1/feedback
- */
+
 exports.addFeedback = async (req, res) => {
   try {
     const { name, message } = req.body;
@@ -27,11 +24,6 @@ exports.addFeedback = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
-
-/**
- * @desc    Get all feedbacks
- * @route   GET /api/v1/feedback
- */
 exports.getAllFeedbacks = async (req, res) => {
   try {
     const feedbacks = await Feedback.find().sort({ createdAt: -1 });
@@ -45,10 +37,6 @@ exports.getAllFeedbacks = async (req, res) => {
   }
 };
 
-/**
- * @desc    Delete feedback
- * @route   DELETE /api/v1/feedback/:id
- */
 exports.deleteFeedback = async (req, res) => {
   try {
     const { id } = req.params;
