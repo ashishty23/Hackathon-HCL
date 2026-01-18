@@ -153,10 +153,8 @@ API_SECRET=your_cloudinary_api_secret
 API_KEY_CHECK=hcl-hackathon-2025
 
 # Email Configuration (for OTP)
-EMAIL_HOST=your_email_host
-EMAIL_PORT=your_email_port
-EMAIL_USER=your_email_username
-EMAIL_PASS=your_email_password
+BREVO_API_KEY=your key
+SENDER_EMAIL=your_email
 ```
 
 ---
