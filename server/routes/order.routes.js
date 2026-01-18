@@ -10,9 +10,9 @@ const {
 const { auth ,isAdmin } = require("../middlewares/auth");
 
 
+
+
 router.post("/", auth, placeOrder);
-
-
 router.get("/all", auth, isAdmin, getAllOrders);
 router.get("/my-orders", auth, getMyOrders);
 router.put(
@@ -21,8 +21,6 @@ router.put(
   isAdmin,
   markOrderReceived
 );
-
-
 const { cancelOrder } = require("../controllers/order.controller");
 
 router.put(
