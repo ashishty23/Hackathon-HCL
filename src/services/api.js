@@ -3,10 +3,10 @@ import axios from "axios";
  
 const api = axios.create({
     
-  baseURL: process.env.VITE_APP_BASE_URL,
+  baseURL: import.meta.env.VITE_APP_BASE_URL,
   headers: {
     // Debugging line   
-    "x-api-key": process.env.VITE_APP_API_KEY
+    "x-api-key": import.meta.env.VITE_APP_API_KEY
   }
 });
 

@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Navbar from "../components/Navbar";
 import { useNavigate } from "react-router-dom";
 
 const Menu = () => {
@@ -14,7 +13,7 @@ const Menu = () => {
   const token = localStorage.getItem("token");
   const navigate = useNavigate();
 
-  const BASE_URL = process.env.REACT_APP_BASE_URL;
+  const BASE_URL = import.meta.env.VITE_APP_BASE_URL;
 
   useEffect(() => {
     if (!token) {
@@ -31,7 +30,7 @@ const Menu = () => {
       const res = await axios.get(`${BASE_URL}/products/menu`, {
         headers: {
           Authorization: `Bearer ${token}`,
-          "x-api-key": process.env.REACT_APP_API_KEY
+          "x-api-key": import.meta.env.VITE_APP_API_KEY
         }
       });
       setProducts(res.data.data);
@@ -47,7 +46,7 @@ const Menu = () => {
       const res = await axios.get(`${BASE_URL}/cart`, {
         headers: {
           Authorization: `Bearer ${token}`,
-          "x-api-key": process.env.REACT_APP_API_KEY
+          "x-api-key": import.meta.env.VITE_APP_API_KEY
         }
       });
       setCart(res.data);
@@ -82,7 +81,7 @@ const Menu = () => {
         {
           headers: {
             Authorization: `Bearer ${token}`,
-            "x-api-key": process.env.REACT_APP_API_KEY
+            "x-api-key": import.meta.env.VITE_APP_API_KEY
           }
         }
       );
@@ -109,7 +108,7 @@ const Menu = () => {
     });
   };
 
-  const categories = ["All", "Pizza", "Drink", "Bread"];
+  const categories = ["All", "Pizza", "Drink"];
 
   const filteredProducts = selectedCategory === "All" 
     ? products 
@@ -117,7 +116,6 @@ const Menu = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-cyan-50 via-teal-50 to-sky-100">
-      <Navbar />
 
       <div className="max-w-7xl mx-auto px-6 py-12 mt-16">
         <div className="text-center mb-12 animate-fade-in">
