@@ -20,13 +20,7 @@ app.use(fileUpload({
 // app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use("/api/v1/otp", require("./routes/otp.routes"));
-app.use("/api/v1/auth", require("./routes/auth.routes"));
-app.use("/api/v1/user", require("./routes/user.routes"));
-app.use("/api/v1/products", require("./routes/product.routes"));
-app.use("/api/v1/cart", require("./routes/cart.routes"));
-app.use("/api/v1/orders", require("./routes/order.routes"));
-app.use("/api/v1/feedback", require("./routes/feedback.routes"));
+
 
 const cors = require("cors");
 
@@ -39,9 +33,15 @@ app.use(cors({
 
 connectDB();
 
-// const { checkApiKey } = require("./middlewares/apiKey.middlewares");
-// app.use(checkApiKey);
-
+const { checkApiKey } = require("./middlewares/apiKey.middlewares");
+app.use(checkApiKey);
+app.use("/api/v1/otp", require("./routes/otp.routes"));
+app.use("/api/v1/auth", require("./routes/auth.routes"));
+app.use("/api/v1/user", require("./routes/user.routes"));
+app.use("/api/v1/products", require("./routes/product.routes"));
+app.use("/api/v1/cart", require("./routes/cart.routes"));
+app.use("/api/v1/orders", require("./routes/order.routes"));
+app.use("/api/v1/feedback", require("./routes/feedback.routes"));
 
 app.get("/", (req, res) => {
 	return res.json({
