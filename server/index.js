@@ -24,8 +24,10 @@ app.use("/api/v1/otp", require("./routes/otp.routes"));
 app.use("/api/v1/auth", require("./routes/auth.routes"));
 app.use("/api/v1/user", require("./routes/user.routes"));
 app.use("/api/v1/products", require("./routes/product.routes"));
-app.use("/api/cart", require("./routes/cart.routes"));
-app.use("/api/orders", require("./routes/order.routes"));
+app.use("/api/v1/cart", require("./routes/cart.routes"));
+app.use("/api/v1/orders", require("./routes/order.routes"));
+app.use("/api/v1/feedback", require("./routes/feedback.routes"));
+
 const cors = require("cors");
 
 
